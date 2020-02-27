@@ -36,7 +36,7 @@ var tumblrAutoPager = {
         gPFncs[1] = function(aE) {
             var r = [];
             for (var i = 0, l = aE.length; i < l; i++) {
-                var arr = aE[i].className ? aE[i].className.split(" ") : null;
+                var arr = (aE[i].className && typeof aE[i].className === 'string') ? aE[i].className.split(" ") : null;
                 if (arr) {
                     for (var j = 0; j < arr.length; j++) {
                         arr[j] == "post" ? r.push(aE[i]) : null;
